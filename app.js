@@ -4,7 +4,7 @@ const app = express();
 app.get('/', function (req, res) {
   console.log('Hello world received a request.');
 
-  const target = process.env.TARGET || 'World';
+  const target = process.env.TARGET || 'Universe';
   res.send('Hello ' + target + '!');
 });
 
