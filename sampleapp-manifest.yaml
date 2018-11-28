@@ -20,9 +20,9 @@ spec:
             name: buildpack
             arguments:
             - name: IMAGE
-              value: us.gcr.io/knative-blueprint/sampleapp
+              value: us.gcr.io/knative-blueprint/sampleapp:latest
       revisionTemplate:
         spec:
           container:
-            image: us.gcr.io/knative-blueprint/sampleapp 
+            image: us.gcr.io/knative-blueprint/sampleapp:latest
             imagePullPolicy: Always
