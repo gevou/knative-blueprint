@@ -1,0 +1,10 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Route
+metadata:
+  # replace with the name of the app/function
+  name: sampleapp
+spec:
+  traffic:
+  # replace with the name of the app/function
+  - configurationName: sampleapp
+    percent: 100

@@ -1,0 +1,28 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: sampleapp
+  namespace: default
+spec:
+  runLatest:
+    configuration:
+      build:
+        apiVersion: build.knative.dev/v1alpha1
+        kind: Build
+        metadata:
+          name: sampleapp
+        spec:
+          source:
+            git:
+              url: https://github.com/gevou/knative-blueprint.git
+              revision: master
+          template:
+            name: buildpack
+            arguments:
+            - name: IMAGE
+              value: us.gcr.io/knative-blueprint/sampleapp
+      revisionTemplate:
+        spec:
+          container:
+            image: us.gcr.io/knative-blueprint/sampleapp 
+            imagePullPolicy: Always

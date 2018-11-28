@@ -81,7 +81,8 @@ pending: \e[31m${pendingBuildPods}\e[39m"\\r
   sleep 1
 done
 
-echo -e "\e[36mInstalling Kaniko build template...\e[39m"
+echo -e "\e[36mInstalling build templates...\e[39m"
 kubectl apply -f https://raw.githubusercontent.com/knative/build-templates/master/kaniko/kaniko.yaml
+kubectl apply -f https://raw.githubusercontent.com/knative/build-templates/master/buildpack/buildpack.yaml
 
 echo -e "\n\e[36mKNative installed successfully!\e[39m"
