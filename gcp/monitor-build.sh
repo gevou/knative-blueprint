@@ -19,10 +19,24 @@
 # run: kubectl proxy
 # then,
 
-# Kibana
-# http://localhost:8001/api/v1/namespaces/knative-monitoring/services/kibana-logging/proxy/app/kibana#/management/kibana/index
-
 # zipkin
 # http://localhost:8001/api/v1/namespaces/istio-system/services/zipkin:9411/proxy/zipkin/
 
 
+# Kibana
+# http://localhost:8001/api/v1/namespaces/knative-monitoring/services/kibana-logging/proxy/app/kibana#/management/kibana/index
+# Currently does not work correctly, see
+# https://github.com/knative/serving/pull/2560
+# https://github.com/knative/serving/issues/2218
+# 
+
+
+
+## StackDriver:
+# To install the Stackdriver monitoring agent:
+# $ curl -sSO https://dl.google.com/cloudagents/install-monitoring-agent.sh
+# $ sudo bash install-monitoring-agent.sh
+
+# To install the Stackdriver logging agent:
+# $ curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh
+# $ sudo bash install-logging-agent.sh
