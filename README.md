@@ -1,7 +1,7 @@
 # knative-blueprint
 Playground for basic knative concepts
 
-`/gcp` contains scripts for setting-up a cluster, installing knative and deploying a sample function to Google Cloud Platofmr
+`/gcp` contains scripts for setting-up a cluster, installing knative and deploying a sample function to Google Cloud Platform
 `/minikube` contains similar scripts for minikube 
 
 The following files in the root folder are related to the sample app:
