@@ -48,7 +48,8 @@ done
 
 echo -e "\n\e[36mInstalling KNative...\e[39m"
 # Install KNative
-time kubectl apply --filename https://github.com/knative/serving/releases/download/v0.2.1/release.yaml || exit 1
+# time kubectl apply --filename https://github.com/knative/serving/releases/download/v0.2.1/release.yaml || exit 1
+time kubectl apply --filename ../knative-serving-release-0.2.2-patched.yaml || exit 1
 
 echo -e "\e[36mWaiting for Knative system pods to get ready...\e[39m"
 time while true; do
