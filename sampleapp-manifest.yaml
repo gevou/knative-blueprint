@@ -10,7 +10,8 @@ spec:
         apiVersion: build.knative.dev/v1alpha1
         kind: Build
         metadata:
-          name: sampleapp
+          labels:
+              expect: succeeded
         spec:
           source:
             git:
@@ -20,9 +21,9 @@ spec:
             name: buildpack
             arguments:
             - name: IMAGE
-              value: us.gcr.io/knative-blueprint/sampleapp:latest
+              value: &image us.gcr.io/knative-blueprint/sampleapp:latest
       revisionTemplate:
         spec:
           container:
-            image: us.gcr.io/knative-blueprint/sampleapp:latest
+            image: *image
             imagePullPolicy: Always
