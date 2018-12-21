@@ -25,4 +25,7 @@ and then to test:
 
 ### TODO
 - Add sample for private github repo
+- Ingress routing configuration and interservice calls
+- Python app deploy
+- green/blue or canary deployments 
 - Add sample for pipeline

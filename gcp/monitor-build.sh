@@ -25,12 +25,7 @@
 
 # Kibana
 # http://localhost:8001/api/v1/namespaces/knative-monitoring/services/kibana-logging/proxy/app/kibana#/management/kibana/index
-# Currently does not work correctly, see
-# https://github.com/knative/serving/pull/2560
-# https://github.com/knative/serving/issues/2218
 # 
-
-
 
 ## StackDriver:
 # To install the Stackdriver monitoring agent:
@@ -40,3 +35,6 @@
 # To install the Stackdriver logging agent:
 # $ curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh
 # $ sudo bash install-logging-agent.sh
+
+
+## Jaeger (trace calls) 
